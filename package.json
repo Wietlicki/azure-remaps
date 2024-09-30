@@ -1,0 +1,46 @@
+{
+  "name": "azure-remaps",
+  "version": "1.0.0",
+  "description": "azure maps react wrapper lib",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.0",
+    "@storybook/addon-essentials": "^8.3.3",
+    "@storybook/addon-interactions": "^8.3.3",
+    "@storybook/addon-links": "^8.3.3",
+    "@storybook/addon-onboarding": "^8.3.3",
+    "@storybook/blocks": "^8.3.3",
+    "@storybook/react": "^8.3.3",
+    "@storybook/react-vite": "^8.3.3",
+    "@storybook/test": "^8.3.3",
+    "@types/react": "^18.3.9",
+    "react": "^18.3.1",
+    "rollup": "^4.22.5",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.3.3",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "azure-maps-control": "^3.3.0"
+  }
+}
