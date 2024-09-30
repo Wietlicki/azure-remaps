@@ -1,6 +1,4 @@
 import React from 'react';
-import IAzureMapContext from './IAzureMapContext';
+import { IAzureMapContext } from './IAzureMapContext';
 
-const AzureMapContext = React.createContext<IAzureMapContext>({});
-
-export default AzureMapContext;
+export const AzureMapContext = React.createContext<IAzureMapContext>({});

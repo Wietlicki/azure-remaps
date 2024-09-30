@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import * as atlas from 'azure-maps-control';
-import DataSourceContext from '../datasourcecontext/DataSourceContext';
-import IDataSourceContext from '../datasourcecontext/IDataSourceContext';
+import { DataSourceContext, IDataSourceContext } from '../datasourcecontext';
 import ISymbolLayer from './ISymbolLayer';
 import { SymbolLayerProps } from './SymbolLayer.types';
 
@@ -45,4 +44,3 @@ export class SymbolLayer extends Component<SymbolLayerProps> implements ISymbolL
         return (this.props.children) ? this.props.children : null;
     }
 }
-export default SymbolLayer

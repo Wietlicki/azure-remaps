@@ -1,6 +1,4 @@
 import React from 'react';
-import IDataSourceContext from './IDataSourceContext';
+import { IDataSourceContext } from './IDataSourceContext';
 
-const DataSourceContext = React.createContext<IDataSourceContext>({});
-
-export default DataSourceContext;
+export const DataSourceContext = React.createContext<IDataSourceContext>({});

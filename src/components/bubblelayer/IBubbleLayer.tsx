@@ -1,5 +1,5 @@
 import * as atlas from 'azure-maps-control';
 
-export default interface IBubbleLayer {
+export interface IBubbleLayer {
     bubbleLayer?: atlas.layer.BubbleLayer
 }

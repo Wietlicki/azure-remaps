@@ -1,1 +1,2 @@
-export {default} from "./AzureMapContext";
+export {AzureMapContext} from "./AzureMapContext";
+export type {IAzureMapContext} from "./IAzureMapContext";

@@ -1,1 +1,1 @@
-export {default} from "./SymbolLayer";
+export {SymbolLayer} from "./SymbolLayer";

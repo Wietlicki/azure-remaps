@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as atlas from 'azure-maps-control';
-import AzureMapContext from '../azuremapcontext/AzureMapContext';
+import { AzureMapContext }  from '../azuremapcontext';
 import IZoomControl from './IZoomControl';
 import { ZoomControlProps } from './ZoomControl.types';
 
@@ -22,4 +22,3 @@ export class ZoomControl extends Component<ZoomControlProps> implements IZoomCon
         return null;
     }
 }
-export default ZoomControl;

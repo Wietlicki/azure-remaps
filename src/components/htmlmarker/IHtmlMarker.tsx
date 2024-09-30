@@ -1,5 +1,5 @@
 import * as atlas from 'azure-maps-control';
 
-export default interface IHtmlMarker {
+export interface IHtmlMarker {
     htmlMarker?: atlas.HtmlMarker
 }

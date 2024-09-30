@@ -1,1 +1,2 @@
-export {default} from "./DataSourceContext";
+export {DataSourceContext} from "./DataSourceContext";
+export type {IDataSourceContext} from "./IDataSourceContext";

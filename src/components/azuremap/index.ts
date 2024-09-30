@@ -1,1 +1,1 @@
-export {default} from "./AzureMap";
+export { AzureMap } from "./AzureMap";

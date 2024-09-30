@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import AzureMapContext from '../azuremapcontext/AzureMapContext';
+import { AzureMapContext } from '../azuremapcontext';
 import { IconCollectionProps } from './IconCollection.types';
 import { IconCollectionState } from './IconCollection.types';
 
@@ -71,4 +71,3 @@ export class IconCollection extends Component<IconCollectionProps, IconCollectio
         return jsx;
     }
 }
-export default IconCollection;

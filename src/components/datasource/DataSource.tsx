@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import * as atlas from 'azure-maps-control';
-import AzureMapContext from '../azuremapcontext/AzureMapContext';
-import DataSourceContext from '../datasourcecontext/DataSourceContext';
-import IAzureMapContext from '../azuremapcontext/IAzureMapContext';
-import IDataSource from './IDataSource';
+import { DataSourceContext } from '../datasourcecontext';
+import { IAzureMapContext, AzureMapContext } from '../azuremapcontext';
+import { IDataSource } from './IDataSource';
 import { DataSourceProps } from './DataSource.types';
 
 export class DataSource extends Component<DataSourceProps> implements IDataSource{
@@ -30,4 +29,3 @@ export class DataSource extends Component<DataSourceProps> implements IDataSourc
         )
     }
 }
-export default DataSource;

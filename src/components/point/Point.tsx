@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as atlas from 'azure-maps-control';
-import DataSourceContext from '../datasourcecontext/DataSourceContext';
+import { DataSourceContext } from '../datasourcecontext';
 import IPoint from './IPoint';
 import { PointProps } from './Point.types';
 
@@ -26,4 +26,3 @@ export class Point extends Component<PointProps> implements IPoint{
         return null;
     }
 }
-export default Point;

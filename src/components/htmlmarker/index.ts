@@ -1,1 +1,2 @@
-export {default} from "./HtmlMarker";
+export {HtmlMarker} from "./HtmlMarker";
+export type {IHtmlMarker} from "./IHtmlMarker";

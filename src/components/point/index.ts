@@ -1,1 +1,1 @@
-export {default} from "./Point";
+export {Point} from "./Point";

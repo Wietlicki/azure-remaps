@@ -1,13 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AzureMap }  from "../components/azuremap/AzureMap"
-import { HtmlMarker }  from "../components/htmlmarker/HtmlMarker"
 import * as atlas from 'azure-maps-control';
-import { BubbleLayer } from '../components/bubblelayer/BubbleLayer';
-import { Point } from '../components/point/Point';
-import DataSource from '../components/datasource/DataSource';
-import SymbolLayer from '../components/symbollayer/SymbolLayer';
-import IconCollection from '../components/iconcollection';
-import ZoomControl from '../components/zoomcontrol/ZoomControl';
+import { AzureMap, BubbleLayer, HtmlMarker, Point, DataSource, SymbolLayer, IconCollection, ZoomControl } from '../components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import * as atlas from 'azure-maps-control';
 import './AzureMap.css';
 import 'azure-maps-control/dist/atlas.min.css';
-import AzureMapContext from '../azuremapcontext/AzureMapContext';
+import { AzureMapContext } from '../azuremapcontext';
 import IAzureMap from './IAzureMap';
 import { AzureMapProps } from './AzureMap.types';
 import { AzureMapState } from './AzureMap.types';

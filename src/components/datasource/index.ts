@@ -1,1 +1,2 @@
-export {default} from "./DataSource";
+export {DataSource} from "./DataSource";
+export type {IDataSource} from "./IDataSource";

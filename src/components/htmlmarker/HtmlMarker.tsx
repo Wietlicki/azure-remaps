@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import * as atlas from 'azure-maps-control';
-import AzureMapContext from '../azuremapcontext/AzureMapContext';
-import IHtmlMarker from './IHtmlMarker';
+import { AzureMapContext } from '../azuremapcontext';
+import { IHtmlMarker } from './IHtmlMarker';
 import { HtmlMarkerProps } from './HtmlMarker.types';
 
 export class HtmlMarker extends Component<HtmlMarkerProps> implements IHtmlMarker{
@@ -27,4 +27,3 @@ export class HtmlMarker extends Component<HtmlMarkerProps> implements IHtmlMarke
         return null;
     }
 }
-export default HtmlMarker;

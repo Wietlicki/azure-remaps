@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import * as atlas from 'azure-maps-control';
-import DataSourceContext from '../datasourcecontext/DataSourceContext';
-import IDataSourceContext from '../datasourcecontext/IDataSourceContext';
-import IBubbleLayer from './IBubbleLayer';
+import { IDataSourceContext, DataSourceContext } from '../datasourcecontext';
+import { IBubbleLayer } from './IBubbleLayer';
 import { BubbleLayerProps } from './BubbleLayer.types';
 
 export class BubbleLayer extends Component<BubbleLayerProps> implements IBubbleLayer{
@@ -28,4 +27,3 @@ export class BubbleLayer extends Component<BubbleLayerProps> implements IBubbleL
         return (this.props.children) ? this.props.children : null;
     }
 }
-export default BubbleLayer;
