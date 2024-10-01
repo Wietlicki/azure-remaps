@@ -22,6 +22,13 @@ export class BubbleLayer extends Component<BubbleLayerProps> implements IBubbleL
             this.context.map.layers.add(this.bubbleLayer);
         }
     }
+    componentWillUnmount() {
+        if(this.context.map && this.bubbleLayer){
+            if(this.context.map.layers.getLayerById(this.bubbleLayer.getId())){
+                this.context.map.layers.remove(this.bubbleLayer);
+            }
+        }
+    }
     //children should populate the dataSource with data
     render(){
         return (this.props.children) ? this.props.children : null;
