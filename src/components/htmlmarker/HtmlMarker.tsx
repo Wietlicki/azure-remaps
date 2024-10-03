@@ -23,6 +23,14 @@ export class HtmlMarker extends Component<HtmlMarkerProps> implements IHtmlMarke
             this.htmlMarker.setOptions(this.props.htmlMarkerOptions);
         }
     }
+    componentWillUnmount(){
+        if(this.htmlMarker && this.context.map){
+            try {
+                this.context.map.markers.remove(this.htmlMarker);
+            }
+            catch {}
+        }
+    }
     render(){
         return null;
     }

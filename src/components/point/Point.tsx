@@ -22,6 +22,11 @@ export class Point extends Component<PointProps> implements IPoint{
             this.point.setCoordinates(this.props.coordinates);
         }
     }
+    componentWillUnmount() {
+        if(this.context.dataSource && this.point && this.context.dataSource.getShapeById(this.point.getId())){
+            this.context.dataSource.removeById(this.point.getId());
+        }
+    }
     render(){
         return null;
     }

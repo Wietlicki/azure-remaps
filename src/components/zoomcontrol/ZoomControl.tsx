@@ -18,6 +18,13 @@ export class ZoomControl extends Component<ZoomControlProps> implements IZoomCon
             this.context.map.controls.add(this.zoomControl, this.props.controlOptions);
         }
     }
+    componentWillUnmount() {
+        if(this.zoomControl && this.context.map){
+            try {
+                this.context.map.controls.remove(this.zoomControl);
+            } catch {}
+        }
+    }
     render(){
         return null;
     }

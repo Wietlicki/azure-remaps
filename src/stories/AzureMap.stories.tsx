@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 
 const authOptions: atlas.AuthenticationOptions = {
   authType: atlas.AuthenticationType.subscriptionKey,
-  subscriptionKey: 'xxxxx'
+  subscriptionKey: 'xxxx'
 }
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
@@ -221,22 +221,32 @@ export const MapWithBubbles: Story = {
       center: [0.0015, 51.4769],
       zoom: 12,
       minZoom: 3
-    }
+    },
+    pointGroupSelection: 1
   },
-  render: (args) => (
-    <AzureMap {...args}>
+  render: (args) => {
+    let pointGroup = <>
+      <Point coordinates={[0.0025, 51.495]}/>
+      <Point coordinates={[-0.0017, 51.48]}/>
+    </>
+    if(args.pointGroupSelection !== 1){
+      pointGroup = <>
+        <Point coordinates={[0.0015, 51.48]}/>
+        <Point coordinates={[0.000, 51.48]}/>
+      </>
+    }
+    return <AzureMap {...args}>
       <DataSource>
         <BubbleLayer options={{
           radius: 6,
           strokeColor: "white",
           strokeWidth: 3, 
           color: "Pink"}}>
-          <Point coordinates={[0.0025, 51.51]}/>
-          <Point coordinates={[-0.0017, 51.48]}/>
+          {pointGroup}
         </BubbleLayer>
       </DataSource>
     </AzureMap>
-  ),
+  },
 };
 
 export const MapWithMultiColorBubbles: Story = {

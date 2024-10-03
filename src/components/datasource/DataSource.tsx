@@ -19,6 +19,11 @@ export class DataSource extends Component<DataSourceProps> implements IDataSourc
             context.map.sources.add(this.dataSource);
         }
     }
+    componentWillUnmount() {
+        if(this.dataSource && this.context.map && this.context.map.sources.getById(this.dataSource.getId())){
+            this.context.map.sources.remove(this.dataSource);
+        }
+    }
     //Render children only if can create a valid dataSource
     render(){
         return (
