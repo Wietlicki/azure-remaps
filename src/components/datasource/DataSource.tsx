@@ -21,6 +21,20 @@ export class DataSource extends Component<DataSourceProps> implements IDataSourc
     }
     componentWillUnmount() {
         if(this.dataSource && this.context.map && this.context.map.sources.getById(this.dataSource.getId())){
+            //remove any layers linked to datasource
+            const layers = this.context.map.layers.getLayers();
+            //loop through layers in map
+            for(let layer of layers){
+                //check layer is a bubble or symbol layer
+                if(layer instanceof atlas.layer.BubbleLayer || layer instanceof atlas.layer.SymbolLayer){
+                    let source = layer.getSource()
+                    //remove layer if DataSource is it's source
+                    if(source instanceof atlas.source.Source && source.getId() === this.dataSource.getId()){
+                        this.context.map.layers.remove(layer);
+                    }
+                }
+            }
+            //remove datasource
             this.context.map.sources.remove(this.dataSource);
         }
     }
