@@ -4,10 +4,14 @@ import * as atlas from 'azure-maps-control';
 
 export default function InteractiveMap({subscriptionKey}:{subscriptionKey: string}){
     const [coordinateOptionIx, setCoordinateOptionIx] = useState(0);
+    const [colorOptionIx, setColorOptionIx] = useState(0);
     const [showPoints, setShowPoints] = useState(true);
 
     const handleRandomizePointClick = useCallback(()=>{
         setCoordinateOptionIx(Math.floor(Math.random() * 3));
+    },[])
+    const handleRandomizeColorClick = useCallback(()=>{
+        setColorOptionIx(Math.floor(Math.random() * 6));
     },[])
     const handleShowToggleClick = useCallback(()=>{
         setShowPoints(!showPoints);
@@ -36,20 +40,23 @@ export default function InteractiveMap({subscriptionKey}:{subscriptionKey: strin
         [0.0015, 51.48],
         [0.000, 51.48]
     ]
+    const colorOptions: Array<string> = ["red", "green", "blue", "yellow", "pink", "orange", "black"];
+    const color = colorOptions[colorOptionIx];
     const pointJSX = <Point coordinates={coordinateOptions[coordinateOptionIx]}/>
     const datasourceJSX = showPoints === true ? <DataSource>
         <BubbleLayer options={{
             radius: 6,
             strokeColor: "white",
             strokeWidth: 3, 
-            color: "red"}}>
+            color: color}}>
             {pointJSX}
         </BubbleLayer>
     </DataSource> : null;
 
     return <div style={{width: "100%", height: "100%"}}>
-        <button onClick={handleRandomizePointClick}>Randomize</button>
+        <button onClick={handleRandomizePointClick}>Random Point</button>
         <button onClick={handleShowToggleClick}>Hide/Show Points</button>
+        <button onClick={handleRandomizeColorClick}>Random Color</button>
         <AzureMap styleOptions={styleOptions} cameraOptions={cameraOptions} authOptions={authOptions}>
             {datasourceJSX}
         </AzureMap>
